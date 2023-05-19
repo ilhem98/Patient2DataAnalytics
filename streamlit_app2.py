@@ -38,7 +38,7 @@ def get_data():
         f.write(content)
     
     # Read the file from disk using pandas
-    df = pd.read_csv('diabete data', sep=';')
+    df = pd.read_csv('diabete data', sep=',')
     glucose = df[['date','time' ,'glycemia(g/l)', 'bolus', 'basal rate (U/h)']]
     return glucose
 
