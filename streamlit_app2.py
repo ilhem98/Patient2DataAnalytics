@@ -25,12 +25,25 @@ with header_mid:
 
 @st.cache_resource
 def get_data():
-    df = pd.read_csv('C:\\Users\\Ilham\\Desktop\\100DaysofCode\\data\\PatientDataAnalytics\\diabete data.csv', sep =',')
-    glucose = df[['date','time' ,'glycemia(g/l)', 'bolus', 'basal rate (U/h)']]
-    return glucose
+    # Download the file from GitHub and save it locally
    
-  
-# Get the DataFrame
+
+    url = 'https://raw.githubusercontent.com/ilhem98/Patient2DataAnalytics/main/diabete%20data.csv'
+
+
+
+    response = requests.get(url)
+    content = response.content
+    with open('30-Days-DExcomClarity_CGM', 'wb') as f:
+        f.write(content)
+    
+    # Read the file from disk using pandas
+    df = pd.read_csv('30-Days-DExcomClarity_CGM', sep=';')
+    glucose = df[['DataDtTm', 'CGM']]
+    return glucose
+
+
+# Call the function to get the data
 df = get_data()
 
 # Print the first 5 rows of the DataFrame
