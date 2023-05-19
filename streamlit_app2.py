@@ -34,12 +34,12 @@ def get_data():
 
     response = requests.get(url)
     content = response.content
-    with open('30-Days-DExcomClarity_CGM', 'wb') as f:
+    with open('diabete data', 'wb') as f:
         f.write(content)
     
     # Read the file from disk using pandas
-    df = pd.read_csv('30-Days-DExcomClarity_CGM', sep=';')
-    glucose = df[['DataDtTm', 'CGM']]
+    df = pd.read_csv('diabete data', sep=';')
+    glucose = df[['date','time' ,'glycemia(g/l)', 'bolus', 'basal rate (U/h)']]
     return glucose
 
 
