@@ -40,11 +40,11 @@ def get_data():
     
     # Read the file from disk using pandas
     df = pd.read_csv('diabete data', sep=',')
-    glucose = df[['date','time' ,'glycemia(g/l)', 'bolus', 'basal rate (U/h)']]
+    
     df['basal rate (U/h)'] = df['basal rate (U/h)'].interpolate(limit_direction='both')
     df['bolus'] = df['bolus'].interpolate(limit_direction='both')
     df['glycemia(g/l)'] = df['glycemia(g/l)'].interpolate(limit_direction='both')
-    df = df[[ 'glycemia(g/l)', 'bolus', 'basal rate (U/h)']]
+    glucose = df[['date','time' ,'glycemia(g/l)', 'bolus', 'basal rate (U/h)']]
     return glucose
 
 
