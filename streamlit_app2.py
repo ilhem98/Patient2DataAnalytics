@@ -110,7 +110,7 @@ st.table(styler2)
 
 fig = plt.figure(figsize=(10,2))
 sns.boxplot(x=df['bolus'])
-plt.title('Blood Glucose Interquartile Range, mu=175');
+plt.title('Blood Glucose Interquartile Range, mu=3');
 st.pyplot(fig)
 
 
