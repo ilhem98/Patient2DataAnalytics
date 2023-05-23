@@ -55,9 +55,9 @@ df = get_data()
 st.write("""
 
 # Data Pre-Processing  
-The first step is to pull the data. In our case, We have a Dexcom Continuous Glucose Monitor (CGM). Dexcom provides easy access to our data which can be downloaded as a CSV file through Dexcom Clarity.
+The first step is to pull the data. In our case, We have an Omnipod Dash. Omnipod Dash provides easy access to our data which can be downloaded as a CSV file through Their Omnipod DISPLAY App.
 
-The important data for us to look at are the DataDtTm and CGM (mg/dL) columns. Every 5 minutes, the CGM acquires a data point, stores it, and displays it to the user.
+The important data for us to look at are the glycemia(g/l), bolus and basal rate (U/h) columns.  Overall, the Omnipod Dash acquires a data point, stores it, and displays it to the user.
 
 
 ---
