@@ -163,7 +163,7 @@ st.table([
 
 st.write("""
 
-Over this 30 day period,  BG values were in range ~91% of the time. We would prefer this number to be higher, but it will never be perfect. 
+Over this 30 day period,  BG values were in range ~90% of the time. We would prefer this number to be higher, but it will never be perfect. 
 
 Ultimately, a higher TIR correlates to a lower risk for microvascular complications .
 
